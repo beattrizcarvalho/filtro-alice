@@ -1,0 +1,186 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  min-height: 100vh;
+  background: #fceef4;
+  font-family: Arial, sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+
+#camera {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.moldura {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.area-filtro {
+  position: relative;
+  width: min(90vw, 360px);
+  aspect-ratio: 9 / 16;
+  background: #fff5f8;
+  overflow: hidden;
+  border-radius: 18px;
+  margin: 20px auto;
+}
+
+.area-filtro #camera {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.area-filtro .moldura {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  z-index: 2;
+}
+
+.frase-filtro {
+  position: absolute;
+  bottom: 22%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+
+  width: 85%;
+  color: #873d62;
+  font-family: 'Great Vibes', cursive;
+  font-size: 32px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.2;
+  text-align: center;
+
+
+text-shadow:
+  1px 1px 2px #ffffff,
+  -1px -1px 2px #ffffff,
+  0 0 8px #ffffff,
+  0 0 14px rgba(255, 255, 255, 0.9);
+
+  pointer-events: none;
+}
+
+.foto-teste {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  z-index: 1;
+}
+
+.area-filtro .moldura {
+  z-index: 2;
+}
+
+.frase-filtro {
+  z-index: 3;
+}
+
+.frase-filtro > span:first-child {
+  display: block;
+}
+
+.nome-alice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-top: 3px;
+  font-family: "Great Vibes", cursive;
+  font-size: 38px;
+  line-height: 1;
+}
+
+.letra-a {
+  width: 44px;
+  height: 50px;
+  object-fit: contain;
+  margin-right: -3px;
+}
+
+/* Ajustes do nome Alice */
+
+.frase-filtro {
+  color: #7d294f;
+  font-size: 27px;
+  width: 90%;
+  bottom: 21%;
+}
+
+.nome-alice {
+  font-size: 46px;
+  margin-top: 0;
+  min-height: 85px;
+}
+
+.letra-a {
+  width: 85px;
+  height: 85px;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-right: -5px;
+}
+
+.nome-alice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  min-height: 0;
+  margin-top: -5px;
+  font-size: 42px;
+}
+
+.letra-a {
+  width: 65px;
+  height: 65px;
+  margin-right: -12px;
+  object-fit: contain;
+
+  filter: contrast(1.8) saturate(1.5)
+          drop-shadow(1px 1px 2px white);
+}
+
+.letra-a {
+  filter:
+    brightness(0.8)
+    contrast(1.6)
+    saturate(1.8)
+    drop-shadow(0 1px 2px #ffffff)
+    drop-shadow(0 0 3px #7d294f);
+}
+.letra-a {
+  transform: translateY(-7px);
+}
